@@ -26,7 +26,12 @@ Then,
 ```bash
 python3 run.py
 ```
-It's that easy!
+It's ready for use!
+
+![usage.png](assets/usage.png)
+
+## Demo
+![effect.png](assets/effect.png)
 
 ## How does it work?
 - It renders the contents of the editor to a pixmap immediately. 

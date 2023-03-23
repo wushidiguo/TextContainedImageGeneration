@@ -2,13 +2,13 @@
 A synthetic data generator for text recognition with user interface.
 
 ## What is it for?
-This work is inpired by [TRDG](https://github.com/Belval/TextRecognitionDataGenerator) which is an excellent tool to generate data for text recognition. This work can be seen as a supplement to TRDG. You may consider this work if you need:
+This work is inpired by [TRDG](https://github.com/Belval/TextRecognitionDataGenerator) which is an excellent tool to generate data for text recognition. This work can be seen as a supplement to TRDG. You may consider to use this work if you need:
 1. A tool with user interface that makes your generation easier.
 2. A tool that has better text format support, such as, underlined text, partly highlighted text, etc.
-3. A tool that has better non-latin text support. It means you can use all system fonts or even use them together in single text line.
+3. A tool that has better non-latin text support.
 Basically, it's a **fully functional line text eidtor**, and converts your text into image.
 
-note: This work currently doesn't provide blurring, distortion and other after-process features that are supported by TRDG, as these features are not key to this work and can be easily applied by users.
+note: This work currently doesn't provide blurring, distortion and other after-process features that are supported by TRDG.
 
 The general UI design is inherited from this great [tutorial](https://github.com/goldsborough/Writer-Tutorial).
 
@@ -26,13 +26,15 @@ Then,
 ```bash
 python3 run.py
 ```
-It's ready for use!
+Input texts in the input area, and set all the fonts and formats. Then select the text range that you want to be randomly replaced during generating, and click the "set dummy" button to add a "text bag" which means the resource of text pieces to choose from. During generation, a text piece will be randomly picked from the "text bag" to replace the piece at corresponding postion for each generated image.
+
+Click "generate images" button and input the number of images you want to generate, then click "OK" to start generating.
+
+All generated images are RGBA format with transparent background for further processing.
+
+You can also save the whole settings as a file for late use.
 
 ![usage.png](assets/usage.png)
 
-## Demo
+## Demo(some generated images)
 ![effect.png](assets/effect.png)
-
-## How does it work?
-- It renders the contents of the editor to a pixmap immediately. 
-- When you generate multiple images, it randomly pick text pieces from the text bags you have set, and paste the text pieces to the *start to end* region of the text (in the editor), so the generated text will keep format.
